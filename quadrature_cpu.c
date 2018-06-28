@@ -15,10 +15,10 @@
 double *points;
 
 // Gaussian height parameter A
-double A = 0.1f;
+double A = 0.1;
 
 // Gaussian width parameter w
-double w = 0.2f;
+double w = 0.2;
 
 // This function evaluates f(x,y,z)
 double func(double x, double y,double z) {

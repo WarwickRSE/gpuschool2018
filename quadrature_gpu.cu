@@ -18,10 +18,10 @@
 __constant__ double points[3*P];
      
 // Gaussian height parameter A
-__constant__ double A = 0.1f;
+__constant__ double A = 0.1;
 
 // Gaussian width parameter w
-__constant__ double w = 0.2f;
+__constant__ double w = 0.2;
 
 // This function evaluates f(x,y,z). It is only
 // visible to the device and cannot be called
