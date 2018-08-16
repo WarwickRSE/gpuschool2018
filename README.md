@@ -17,3 +17,5 @@ This software is available on all Linux hosts managed by the [Scientific Computi
 ```
 $ module load GCC/6.4.0-2.28 OpenMPI Python OpenBLAS CUDA PyCUDA pygpu numba pyculib Pillow IPython matplotlib
 ```
+
+Porgs are cool.
