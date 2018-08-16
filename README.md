@@ -1,6 +1,6 @@
 # gpuschool2018
 
-Examples and teaching material for the July 2018 "Introduction to GPU programming summer school at the University of Warwick". 
+Examples and teaching material for the July 2018 "Introduction to GPU programming" summer school at the University of Warwick. 
 
 To run the notebooks you will need a CUDA capable GPU card. The examples use double precision arithmetic and assume a GPU with a compute capability of 2.0 or higher. The school was conducted using Kepler K20c and K80 hardware. 
 
