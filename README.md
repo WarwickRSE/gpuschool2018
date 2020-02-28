@@ -15,11 +15,11 @@ To run the notebooks you will need a CUDA capable GPU card. The examples use dou
 
 This software is available on all Linux hosts managed by the [Scientific Computing Research Technology Plaform](https://warwick.ac.uk/research/rtp/sc) at the [University of Warwick](https://warwick.ac.uk/) via environment modules,
 ```
-$ module load GCC/6.4.0-2.28 OpenMPI Python OpenBLAS CUDA PyCUDA pygpu numba pyculib Pillow IPython matplotlib
+$ module load GCC/6.4.0-2.28 OpenMPI Python OpenBLAS CUDA numba pyculib Pillow IPython matplotlib
 ```
 or alternatively (updated modules Feburary 2019)
 ```
-$ module load GCC/7.3.0-2.30 OpenMPI Python OpenBLAS CUDA PyCUDA pygpu numba pyculib Pillow IPython matplotlib
+$ module load GCC/7.3.0-2.30 OpenMPI Python OpenBLAS CUDA numba pyculib Pillow IPython matplotlib
 ```
 
 Porgs are cool.
