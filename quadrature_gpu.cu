@@ -91,7 +91,7 @@ __global__ void integrate1D(double Min, double Max, int Ngrid, double *g_dev ) {
   in a long vector of length Ngrid*Ngrid rather 
   than in a 2D matrix.
 !===============================================*/
-int main () {
+int main (int argc, char *argv[]) {
 
   // Extend of domain in each dimension
   double gridMax =  10.0;
@@ -120,6 +120,14 @@ int main () {
   int i,j,count,idev;
   double x;
 
+  // Process command line argument
+  if (argc != 2) {
+    printf("Usage : quad_gpu <device_id>\n");
+    exit(EXIT_FAILURE);
+  }
+
+  int in_dev = atoi(argv[1]);
+
   // Make sure we have a CUDA capable device to work with
   err = cudaGetDeviceCount(&count);
   if ( (count==0) || (err!=cudaSuccess) ) {
@@ -129,11 +137,18 @@ int main () {
     printf("Found %d CUDA devices in this system\n",count);
   }
 
+  err = cudaSetDevice(in_dev);
+  if ( err!=cudaSuccess ) {
+    printf("Error setting active device\n");
+    exit(EXIT_FAILURE);
+  }
+
   err = cudaGetDevice(&idev);
   if ( err!=cudaSuccess ) {
     printf("Error identifying active device\n");
     exit(EXIT_FAILURE);
   }
+
   printf("Using device %d\n",idev);
 
   // Allocate memory for points on the host
@@ -203,7 +218,7 @@ int main () {
   printf("Launching %d threads\n",blocks.x*blocks.y*threads.x*threads.y);
 
   integrate1D<<<blocks,threads>>>(gridMin,gridMax,Ngrid,g_dev);
-  cudaThreadSynchronize();
+  cudaDeviceSynchronize();
 
   clock_t t2 = clock();
 
