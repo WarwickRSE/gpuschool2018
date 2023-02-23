@@ -14,8 +14,15 @@ To run the notebooks you will need a CUDA capable GPU card. The examples use dou
 * [Jupyter](http://jupyter.org/)
 
 This software is available on all Linux hosts managed by the [Scientific Computing Research Technology Plaform](https://warwick.ac.uk/research/rtp/sc) at the [University of Warwick](https://warwick.ac.uk/) via environment modules,
+
+On the (old) CentOS 7 desktop use:
 ```
 $ module load GCC/10.2.0 CUDA/11.1.1 OpenMPI/4.0.5 Python OpenBLAS numba CuPy Pillow IPython matplotlib
 ```
+One new (new) Rocky 9 desktop use:
+```
+$ module load GCC/11.3.0 OpenMPI/4.1.4 CUDA/11.7.0 Python numba CuPy Pillow IPython matplotlib
+```
+
 
 Porgs are cool.
